@@ -1,5 +1,3 @@
-// Faizan Shaikh, 2/13/26, IT202-002, Login-Logout assignment, fms39@njit.edu
-
 <?php
 function getDB($echo_mode = false)
 {

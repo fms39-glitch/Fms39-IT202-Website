@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION['login'])) {
 ?>
-    <h2>Please log in</h2><br>
+    <h2>Please Login to the Watches Inventory Website</h2><br>
     <form name="login" action="index.php" method="post">
         <label>Email:</label>
         <input type="text" name="email_address" size="20">
@@ -16,7 +16,7 @@ if (!isset($_SESSION['login'])) {
     </form>
 <?php
 } else {
-    echo "<h2>Welcome {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h2>";
+    echo "<h1>Welcome to Watches Inventory Helper</h1> <br> <h2>Welcome {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h2>";
 ?>
     <br><br>
 
