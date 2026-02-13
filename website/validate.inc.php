@@ -1,3 +1,6 @@
+<!--Faizan Shaikh, 2/13/26, IT202-002, Login-Logout assignment, fms39@njit.edu-->
+
+
 <?php
 error_log('$_POST ' . print_r($_POST, true));
 require_once('database.php');
