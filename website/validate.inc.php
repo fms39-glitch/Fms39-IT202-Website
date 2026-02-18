@@ -4,7 +4,7 @@
 <?php
 error_log('$_POST ' . print_r($_POST, true));
 require_once('database.php');
-$emailAddress = $_POST['email_address'];
+$emailAddress = $_POST['email_address']; //should be the name from the forms in index.html
 $password = $_POST['password'];
 $query = "SELECT email_address, first_name, last_name, pronouns, phone_number 
           FROM watches_users 
