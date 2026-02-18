@@ -12,13 +12,13 @@ $query = "SELECT email_address, first_name, last_name, pronouns, phone_number
 
 $db = getDB();
 $stmt = $db->prepare($query);
-$stmt->bind_param("ss", $emailAddress, $password);
+$stmt->bind_param("ss", $emailAddress, $password);  //replaces the ?? from $query
 $stmt->execute();
-$stmt->bind_result($email, $firstName, $lastName, $pronouns, $phone);
-$fetched = $stmt->fetch();
+$stmt->bind_result($email, $firstName, $lastName, $pronouns, $phone); //create variables to hold the data coming back from the database
+$fetched = $stmt->fetch(); // checks whether the data provided is correct or not
 $db->close();
 
-if ($fetched) {
+if ($fetched) {    //If the data is correct then executes this block
     $_SESSION['login'] = true;
     $_SESSION['emailAddress'] = $email;
     $_SESSION['firstName'] = $firstName;
