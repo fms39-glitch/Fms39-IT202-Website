@@ -1,4 +1,5 @@
 -- Active: 1769447622519@@127.0.0.1@3306@watches
+--Faizan Shaikh, 2/25/26, IT202-002, CRUD Categories and Items, fms39@njit.edu-->
 
 --Categories Table
 CREATE TABLE watches_types (

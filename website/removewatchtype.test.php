@@ -1,3 +1,5 @@
+<!--Faizan Shaikh, 2/25/26, IT202-002, CRUD Categories and Items, fms39@njit.edu-->
+
 <?php
 error_log('$_POST ' . print_r($_POST, true));
 require_once("watchtype.php");
