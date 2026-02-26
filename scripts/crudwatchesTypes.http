@@ -2,10 +2,10 @@
 POST http://localhost:3000/addwatchtype.test.php
 Content-Type: application/x-www-form-urlencoded
 
-watches_type_id=3
-&watches_type_code=FW
-&watches_type_name=FitnessWatch
-&watches_ShelfNumber=3
+watches_type_id=1
+&watches_type_code=SM
+&watches_type_name=SmartWatch
+&watches_ShelfNumber=1
 
 ### Read/List all watch types
 GET http://localhost:3000/listwatchestypes.test.php

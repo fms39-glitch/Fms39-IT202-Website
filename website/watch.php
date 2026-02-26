@@ -67,10 +67,10 @@ class Watch
     function saveWatch()
     {
         $db = getDB();
-        $query = "INSERT INTO watches VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO watches (watches_id, watches_code, watches_name, watches_description, watchesMaterial, watchesWaterResistance, watches_type_id, watches_buy_price, watches_sell_price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $db->prepare($query);
         $stmt->bind_param(
-            "isssssids",           // data types: integer, string, string, string, string, string, integer, decimal/float, string
+            "isssssidd",                     // data types: i,s,s,s,s,s,i,d,d
             $this->watches_id,              // integer data type
             $this->watches_code,            // string data type
             $this->watches_name,            // string data type
@@ -122,15 +122,15 @@ class Watch
             "watches_sell_price= ? WHERE watches_id = $this->watches_id";
         $stmt = $db->prepare($query);
         $stmt->bind_param(
-            "ssssidd",
-            $this->watches_code,
-            $this->watches_name,
-            $this->watches_description,
-            $this->watchesMaterial,
-            $this->watchesWaterResistance,
-            $this->watches_type_id,
-            $this->watches_buy_price,
-            $this->watches_sell_price
+            "sssssidd",                      // data types: s,s,s,s,s,i,d,d
+            $this->watches_code,            // string data type
+            $this->watches_name,            // string data type
+            $this->watches_description,     // string data type
+            $this->watchesMaterial,         // string data type
+            $this->watchesWaterResistance,  // string data type
+            $this->watches_type_id,         // integer data type
+            $this->watches_buy_price,       // decimal/float data type
+            $this->watches_sell_price       // decimal/float data type
         );
         $result = $stmt->execute();
         $db->close();

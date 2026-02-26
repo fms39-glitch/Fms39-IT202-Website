@@ -16,8 +16,15 @@ if ((trim($watches_id) == '') or (!is_numeric($watches_id))) {
     $watches_sell_price = $_POST['watches_sell_price'];
     $watch = new Watch($watches_id, $watches_code, $watches_name, $watches_description, $watchesMaterial, $watchesWaterResistance, $watches_type_id, $watches_buy_price, $watches_sell_price);
     $result = $watch->saveWatch();
-    if ($result)
+    if ($result) {
         echo "<h2>New Watch #$watches_id successfully added</h2>\n";
-    else
+        echo "<h2>Watch ID: $watches_id</h2>\n";
+        echo "<h2>$watches_code - $watches_name</h2>\n";
+        echo "<h2>Description: $watches_description</h2>\n";
+        echo "<h2>Material: $watchesMaterial - Water Resistance: $watchesWaterResistance</h2>\n";
+        echo "<h2>Type ID: $watches_type_id</h2>\n";
+        echo "<h2>Buy Price: $watches_buy_price - Sell Price: $watches_sell_price</h2>\n";
+    } else {
         echo "<h2>Sorry, there was a problem adding that watch</h2>\n";
+    }
 }

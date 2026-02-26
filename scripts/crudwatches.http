@@ -1,15 +1,17 @@
 ### Add a new watch
 POST http://localhost:3000/addwatch.test.php
 Content-Type: application/x-www-form-urlencoded
-watches_id=1
-&watches_code=__
-&watches_name=__
-&watches_description=__
-&watchesMaterial=__
-&watchesWaterResistance=__
-&watches_type_id=__
-&watches_buy_price=__
-&watches_sell_price=__
+
+watches_id=15
+&watches_code=FW005
+&watches_name=Wahoo Elemnt Rival
+&watches_description=The Wahoo Elemnt Rival is a multisport GPS watch built specifically for triathletes with automatic sport detection transition tracking. It features a clean minimalist display with customizable data pages and seamless Wahoo ecosystem integration.
+&watchesMaterial=Polycarbonate
+&watchesWaterResistance=50m
+&watches_type_id=3
+&watches_buy_price=220.00
+&watches_sell_price=279.00
+
 
 ### Read/List all watches
 GET http://localhost:3000/listwatches.test.php
@@ -17,17 +19,19 @@ GET http://localhost:3000/listwatches.test.php
 ### Update an existing watch
 POST http://localhost:3000/changewatch.test.php
 Content-Type: application/x-www-form-urlencoded
-watches_id=__
-&watches_code=__
-&watches_name=__
-&watches_description=__
-&watchesMaterial=__
-&watchesWaterResistance=__
-&watches_type_id=__
-&watches_buy_price=__
-&watches_sell_price=__
+
+watches_id=1
+&watches_code=W002
+&watches_name=Apple smart
+&watches_description=Smart watch with health and fitness tracking
+&watchesMaterial=Aluminum
+&watchesWaterResistance=50m
+&watches_type_id=1
+&watches_buy_price=150.00
+&watches_sell_price=300.00
 
 ### Delete a watch
 POST http://localhost:3000/removewatch.test.php
 Content-Type: application/x-www-form-urlencoded
-watches_id=__
+
+watches_id=1
