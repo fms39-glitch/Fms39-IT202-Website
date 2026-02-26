@@ -1,0 +1,27 @@
+### Add a new watch type
+POST http://localhost:3000/addwatchtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+watches_type_id=3
+&watches_type_code=FW
+&watches_type_name=FitnessWatch
+&watches_ShelfNumber=3
+
+### Read/List all watch types
+GET http://localhost:3000/listwatchestypes.test.php
+
+### Update an existing watch type
+POST http://localhost:3000/changewatchtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+watches_type_id=1
+&watches_type_code=SW
+&watches_type_name=SmartWatch
+&watches_ShelfNumber=1
+
+### Delete a watch type
+POST http://localhost:3000/removewatchtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+watches_type_id=1
+

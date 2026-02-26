@@ -1,0 +1,33 @@
+### Add a new watch
+POST http://localhost:3000/addwatch.test.php
+Content-Type: application/x-www-form-urlencoded
+watches_id=1
+&watches_code=__
+&watches_name=__
+&watches_description=__
+&watchesMaterial=__
+&watchesWaterResistance=__
+&watches_type_id=__
+&watches_buy_price=__
+&watches_sell_price=__
+
+### Read/List all watches
+GET http://localhost:3000/listwatches.test.php
+
+### Update an existing watch
+POST http://localhost:3000/changewatch.test.php
+Content-Type: application/x-www-form-urlencoded
+watches_id=__
+&watches_code=__
+&watches_name=__
+&watches_description=__
+&watchesMaterial=__
+&watchesWaterResistance=__
+&watches_type_id=__
+&watches_buy_price=__
+&watches_sell_price=__
+
+### Delete a watch
+POST http://localhost:3000/removewatch.test.php
+Content-Type: application/x-www-form-urlencoded
+watches_id=__
