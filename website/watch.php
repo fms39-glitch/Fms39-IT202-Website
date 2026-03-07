@@ -145,4 +145,32 @@ class Watch
         $db->close();
         return $result;
     }
+    static function getWatchesByType($watches_type_id)
+    {
+        $db = getDB();
+        $query = "SELECT * FROM watches WHERE watches_type_id = $watches_type_id";
+        $result = $db->query($query);
+        if (mysqli_num_rows($result) > 0) {
+            $watches = array();
+            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                $watch = new Watch(
+                    $row['watches_id'],
+                    $row['watches_code'],
+                    $row['watches_name'],
+                    $row['watches_description'],
+                    $row['watchesMaterial'],
+                    $row['watchesWaterResistance'],
+                    $row['watches_type_id'],
+                    $row['watches_buy_price'],
+                    $row['watches_sell_price']
+                );
+                array_push($watches, $watch);
+            }
+            $db->close();
+            return $watches;
+        } else {
+            $db->close();
+            return NULL;
+        }
+    }
 }
