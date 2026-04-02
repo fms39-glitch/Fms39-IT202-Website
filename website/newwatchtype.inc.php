@@ -4,27 +4,23 @@
     <table cellpadding="1" border="0">
         <tr>
             <td>watches_type_id:</td>
-            <!-- type="number"  only numbers can be entered -->
-            <!-- min/max sets allowed numeric range -->
-            <!-- required:  field cannot be left blank -->
-            <td><input type="number" name="watches_type_id" size="4" min="1" max="9999" required></td>
+            <!-- number type, required, min/max range -->
+            <td><input type="number" name="watches_type_id" min="1" max="9999" required></td>
         </tr>
         <tr>
             <td>watches_type_code:</td>
-            <!-- minlength/maxlength enforces character length limits -->
-            <!-- required ensures field cannot be left blank -->
-            <td><input type="text" name="watches_type_code" size="20" minlength="2" maxlength="10" required></td>
+            <!-- required, min 2 max 10 characters -->
+            <td><input type="text" name="watches_type_code" minlength="2" maxlength="10" required></td>
         </tr>
         <tr>
             <td>watches_type_name:</td>
-            <!-- minlength of 10 ensures a meaningful name is entered -->
-            <!-- maxlength of 100 matches database column limit -->
-            <td><input type="text" name="watches_type_name" size="20" minlength="10" maxlength="100" required></td>
+            <!-- required, min 10 max 100 characters -->
+            <td><input type="text" name="watches_type_name" minlength="10" maxlength="100" required></td>
         </tr>
         <tr>
             <td>watches_ShelfNumber:</td>
-            <!-- type="number" ensures only numbers can be entered for shelf -->
-            <td><input type="number" name="watches_ShelfNumber" size="4" min="1" max="999" required></td>
+            <!-- number type, required, min/max range -->
+            <td><input type="number" name="watches_ShelfNumber" min="1" max="999" required></td>
         </tr>
     </table><br>
     <input type="submit" value="Submit New Watch Type">

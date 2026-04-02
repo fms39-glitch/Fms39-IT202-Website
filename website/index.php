@@ -10,11 +10,10 @@ require_once("watch.php");
 <head>
     <title>Faizan's Watches</title>
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- Links external CSS stylesheet -->
+
     <link rel="stylesheet" href="styles.css">
     <!-- Favicon for browser tab -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
 <body>

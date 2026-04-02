@@ -19,23 +19,28 @@ if (!isset($_POST['watches_id']) or (!is_numeric($_POST['watches_id']))) {
                 </tr>
                 <tr>
                     <td>watches_code</td>
-                    <td><input type="text" name="watches_code" value="<?php echo $watch->watches_code; ?>"></td>
+                    <!-- required, min 2 max 10 characters -->
+                    <td><input type="text" name="watches_code" minlength="2" maxlength="10" required value="<?php echo $watch->watches_code; ?>"></td>
                 </tr>
                 <tr>
                     <td>watches_name</td>
-                    <td><input type="text" name="watches_name" value="<?php echo $watch->watches_name; ?>"></td>
+                    <!-- required, min 10 max 100 characters -->
+                    <td><input type="text" name="watches_name" minlength="10" maxlength="100" required value="<?php echo $watch->watches_name; ?>"></td>
                 </tr>
                 <tr>
                     <td>watches_description</td>
-                    <td><input type="text" name="watches_description" value="<?php echo $watch->watches_description; ?>"></td>
+                    <!-- required, min 100 max 255 characters -->
+                    <td><input type="text" name="watches_description" minlength="100" maxlength="255" required value="<?php echo $watch->watches_description; ?>"></td>
                 </tr>
                 <tr>
                     <td>watchesMaterial</td>
-                    <td><input type="text" name="watchesMaterial" value="<?php echo $watch->watchesMaterial; ?>"></td>
+                    <!-- required, min 2 max 50 characters -->
+                    <td><input type="text" name="watchesMaterial" minlength="2" maxlength="50" required value="<?php echo $watch->watchesMaterial; ?>"></td>
                 </tr>
                 <tr>
                     <td>watchesWaterResistance</td>
-                    <td><input type="text" name="watchesWaterResistance" value="<?php echo $watch->watchesWaterResistance; ?>"></td>
+                    <!-- required, min 2 max 60 characters -->
+                    <td><input type="text" name="watchesWaterResistance" minlength="2" maxlength="60" required value="<?php echo $watch->watchesWaterResistance; ?>"></td>
                 </tr>
                 <tr>
                     <td>Watch Type:</td>
@@ -55,11 +60,13 @@ if (!isset($_POST['watches_id']) or (!is_numeric($_POST['watches_id']))) {
                 </tr>
                 <tr>
                     <td>watches_buy_price</td>
-                    <td><input type="text" name="watches_buy_price" value="<?php echo $watch->watches_buy_price; ?>"></td>
+                    <!-- number type, decimal allowed, min/max range -->
+                    <td><input type="number" name="watches_buy_price" min="0.01" max="999999.99" step="0.01" required value="<?php echo $watch->watches_buy_price; ?>"></td>
                 </tr>
                 <tr>
                     <td>watches_sell_price</td>
-                    <td><input type="text" name="watches_sell_price" value="<?php echo $watch->watches_sell_price; ?>"></td>
+                    <!-- number type, decimal allowed, min/max range -->
+                    <td><input type="number" name="watches_sell_price" min="0.01" max="999999.99" step="0.01" required value="<?php echo $watch->watches_sell_price; ?>"></td>
                 </tr>
             </table><br><br>
             <input type="submit" name="answer" value="Update Watch">
