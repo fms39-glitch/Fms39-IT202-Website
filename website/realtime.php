@@ -1,0 +1,23 @@
+<?php
+ob_start();
+include("watchtype.php");
+include("watch.php");
+$totalWatchTypes = WatchType::getTotalWatchTypes();
+$totalWatches = Watch::getTotalWatches();
+$buypricetotal = Watch::getTotalBuyPrice();
+$sellpricetotal = Watch::getTotalSellPrice();
+$doc = new DomDocument("1.0");
+$inventoryElement = $doc->createElement("inventory");
+$inventoryElement = $doc->appendChild($inventoryElement);
+$watchtypesElement = $doc->createElement("watchtypes", $totalWatchTypes);
+$watchtypesElement = $inventoryElement->appendChild($watchtypesElement);
+$watchesElement = $doc->createElement("watches", $totalWatches);
+$watchesElement = $inventoryElement->appendChild($watchesElement);
+$buypricetotalElement = $doc->createElement("buypricetotal", $buypricetotal);
+$buypricetotalElement = $inventoryElement->appendChild($buypricetotalElement);
+$sellpricetotalElement = $doc->createElement("sellpricetotal", $sellpricetotal);
+$sellpricetotalElement = $inventoryElement->appendChild($sellpricetotalElement);
+$output = $doc->saveXML();
+header("Content-type: application/xml");
+ob_end_clean();
+echo $output;

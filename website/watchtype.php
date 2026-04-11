@@ -106,4 +106,14 @@ class WatchType
         $db->close();
         return $result;
     }
+
+    static function getTotalWatchTypes()
+    {
+        $db = getDB();
+        $query = "SELECT COUNT(*) FROM watches_types";
+        $result = $db->query($query);
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $db->close();
+        return $row[0];
+    }
 }

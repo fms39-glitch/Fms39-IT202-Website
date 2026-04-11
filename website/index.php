@@ -9,11 +9,9 @@ require_once("watch.php");
 
 <head>
     <title>Faizan's Watches</title>
-
-
     <link rel="stylesheet" href="styles.css">
-    <!-- Favicon for browser tab -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="realtime.js"></script>
 </head>
 
 <body>
@@ -33,6 +31,15 @@ require_once("watch.php");
             }
             ?>
         </main>
+        <?php if (isset($_SESSION['login'])) { ?>
+            <aside>
+                <?php include("aside.inc.php"); ?>
+                <script>
+                    getRealTime();
+                    setInterval(getRealTime, 5000);
+                </script>
+            </aside>
+        <?php } ?>
     </section>
     <footer>
         <?php include("footer.inc.php"); ?>

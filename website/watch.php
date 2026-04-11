@@ -173,4 +173,34 @@ class Watch
             return NULL;
         }
     }
+
+    static function getTotalWatches()
+    {
+        $db = getDB();
+        $query = "SELECT COUNT(*) FROM watches";
+        $result = $db->query($query);
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $db->close();
+        return $row[0];
+    }
+
+    static function getTotalBuyPrice()
+    {
+        $db = getDB();
+        $query = "SELECT SUM(watches_buy_price) FROM watches";
+        $result = $db->query($query);
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $db->close();
+        return $row[0];
+    }
+
+    static function getTotalSellPrice()
+    {
+        $db = getDB();
+        $query = "SELECT SUM(watches_sell_price) FROM watches";
+        $result = $db->query($query);
+        $row = $result->fetch_array(MYSQLI_NUM);
+        $db->close();
+        return $row[0];
+    }
 }

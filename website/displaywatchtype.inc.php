@@ -1,5 +1,4 @@
 <!--Faizan Shaikh, 2/25/26, IT202-002, CRUD Categories and Items, fms39@njit.edu-->
-
 <?php
 if (!isset($_REQUEST['watches_type_id']) or (!is_numeric($_REQUEST['watches_type_id']))) {
 ?>
