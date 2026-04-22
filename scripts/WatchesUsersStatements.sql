@@ -84,7 +84,7 @@ VALUES (
         'shahruk@bollywood.com',
         SHA2('IamSh0rtP@ssword', 256),
         'He/Him',
-        'Shahruk',
+        'Shahrukh',
         'Khan',
         '129-7876-123'
     );
